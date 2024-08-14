@@ -53,7 +53,9 @@ public class FirstFragment extends Fragment {
 
     public void gotoSecond(View view) {
 
-        NavDirections action = FirstFragmentDirections.actionFirstFragmentToSecondFragment();
+        //NavDirections action = FirstFragmentDirections.actionFirstFragmentToSecondFragment();
+        FirstFragmentDirections.ActionFirstFragmentToSecondFragment action =  FirstFragmentDirections.actionFirstFragmentToSecondFragment();
+        action.setAge(52);
         Navigation.findNavController(view).navigate(action);
     }
 }

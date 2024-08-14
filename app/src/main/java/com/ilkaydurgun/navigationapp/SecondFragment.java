@@ -49,6 +49,12 @@ public class SecondFragment extends Fragment {
                 gotoFirst(v);
             }
         });
+        if(getArguments() != null){
+            int age = SecondFragmentArgs.fromBundle(getArguments()).getAge();
+            textView.setText("Age:"+age);
+
+
+        }
     }
 
     public void gotoFirst(View view) {
